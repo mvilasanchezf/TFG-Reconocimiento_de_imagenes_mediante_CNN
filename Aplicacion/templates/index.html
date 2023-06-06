@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconocimiento CNN</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="static/css/main.css" rel="stylesheet"> 
+    
+</head>
+
+<body>
+
+    <Center>
+        <h1> Reconocimiento de imagenes de flora y fauna mediante CNN</h1>
+    <Center>
+    <Center>
+        <a href="/">Reiniciar herramienta</a>
+    <Center>
+    <Center>
+        <div class="container">
+            <div class="container">
+                <img src="static/img/unnamed.png">
+            </div>
+            <div class="form-container">
+                <h2>Seleccione una imagen de su ordenador</h2>
+                <form action="/predict" method="POST" enctype="multipart/form-data">
+                <br>
+                <input type="file" id="fileToUpload" name="fileToUpload" accept="jpg">
+                <br>
+                <br>
+                <img width="200" src="{{user_image}}">
+                <br>
+                <br>
+                <input type="submit" value="Subir imagen" name="submit">
+                </form>
+            </div>
+            <br>
+            <br>
+            <div class="container">
+                <div class="an-container">
+                      <h2>Analisis</h2>
+                    {{ prediction_text }}
+        
+                    <br>
+                    <br>
+                    {{ prediction_text2 }}
+        
+                    <br>
+                    <br>
+                    {{ prediction_text3 }}
+        
+                    <br>
+                    <br>
+                    {{ prediction_text4 }}
+        
+                    <br>
+                    <br>
+                    {{ prediction_text5 }}
+
+                    <br>
+                    <br>
+                    {{ prediction_text6 }}
+
+                    <br>
+                    <br>
+                    {{ prediction_text7 }}
+
+                    <br>
+                    <br>
+                    {{ prediction_text8 }}
+
+                    <br>
+                    <br>
+                    {{ prediction_text9 }}
+
+    
+                </div>
+                  
+                
+            </div>
+       
+        </div>
+
+        
+  
+
+        
+        
+    <Center>
+  
+    
+           
+            
+</body>
+
+</html>
