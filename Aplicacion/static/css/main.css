@@ -20,10 +20,16 @@ h1 {
     align-items: center;
     height: 100vh;
 }
-.container img {
+.inatur {
     width: 80%;
     height: auto;
     border-radius: 50%;
+}
+
+.img-user {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 .an-container {
     width: 100%;

@@ -23,9 +23,10 @@
         <a href="/">Reiniciar herramienta</a>
     <Center>
     <Center>
+        <!-- Seccion de análisis -->
         <div class="container">
             <div class="container">
-                <img src="static/img/unnamed.png">
+                <img class="inatur" src="static/images/unnamed.png">
             </div>
             <div class="form-container">
                 <h2>Seleccione una imagen de su ordenador</h2>
@@ -34,7 +35,7 @@
                 <input type="file" id="fileToUpload" name="fileToUpload" accept="jpg">
                 <br>
                 <br>
-                <img width="200" src="{{user_image}}">
+                <img class="img-user" width="300" src="{{user_image}}">
                 <br>
                 <br>
                 <input type="submit" value="Subir imagen" name="submit">
@@ -42,9 +43,11 @@
             </div>
             <br>
             <br>
+
+            <!-- Seccion de análisis -->
             <div class="container">
                 <div class="an-container">
-                      <h2>Analisis</h2>
+                      <h2>Análisis</h2>
                     {{ prediction_text }}
         
                     <br>
