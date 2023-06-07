@@ -9,6 +9,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')
+    
 
 
 @app.route('/predict', methods=['POST'])
@@ -16,10 +17,15 @@ def predict():
     if request.method == 'POST':
         file = request.files['fileToUpload']
         if file is not None:
+
+            #guardamos la imagen en la carpeta static/images
+            file.save("static/images/" + file.filename)
+            image = "static/images/" + file.filename
+
+            #llamamos a la funcion transform_image para transformar la imagen en un tensor
             input_tensor = transform_image(file)
             predict_prob, prediction_idx = get_prediction(input_tensor)
             class_name = render_prediction(prediction_idx)
-            image = Image.open(file)
 
             #parseamos el json class_name para devolver las categorias de la imagen almacenadas en el json pasandolos a strings
             details = json.loads(class_name)
@@ -34,7 +40,7 @@ def predict():
 
             response = {'prediction': {'accuracy': predict_prob, 'common_name': common_name, 'kingdom': kingdom, 'phylum': phylum, 'class': class_, 'order': order, 'family': family, 'genus': genus, 'specific_epithet': specific_epithet}}
             return render_template('index.html', 
-                                    user_image = file,
+                                    user_image = image,
                                     prediction_text = "Con una precisión del {0} '%' ".format(response["prediction"]["accuracy"]), 
                                     prediction_text2 =  " El Nombre comun es: {0}".format(response["prediction"]["common_name"]),
                                     prediction_text3 =  " El reino es: {0}".format(response["prediction"]["kingdom"]),
