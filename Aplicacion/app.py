@@ -6,18 +6,23 @@ from PIL import Image
 
 app = Flask(__name__)
 
+#archivos permitidos para subir al servidor
+ALLOWED_EXTENSIONS = {'jpg'}
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
 #funcion para renderizar la pagina web
 @app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')
     
 
-#funcion para predecir la imagen subida por el usuario y devolver la prediccion en la pagina web
+#funcion para predecir la imagen subida por el usuario y devolver la prediccion en la pagina web y que devuelve un error si no es un archivo permitido
 @app.route('/predict', methods=['POST'])
 def predict():
     if request.method == 'POST':
         file = request.files['fileToUpload']
-        if file is not None:
+        if file is not None and allowed_file(file.filename):
 
             #guardamos la imagen en la carpeta static/images
             file.save("static/images/" + file.filename)
@@ -58,7 +63,7 @@ def predict():
                                     prediction_text8 =  " El genero es: {0}".format(response["prediction"]["genus"]),
                                     prediction_text9 =  " La especie es: {0}".format(response["prediction"]["specific_epithet"])
                                     )
-                                     
-    return render_template('index.html', prediction_text="No se ha podido realizar la predicción, por favor, inténtelo de nuevo")
+        
+        return render_template('index.html', prediction_text="No se ha podido realizar la predicción, por favor seleccione un archivo valido e inténtelo de nuevo.")
 if __name__ == '__main__':
     app.run(debug=True)

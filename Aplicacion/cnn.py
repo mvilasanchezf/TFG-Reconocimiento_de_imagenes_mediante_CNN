@@ -7,7 +7,7 @@ import numpy as np
 img_size = (224, 224)
 mean = np.array([0.485, 0.456, 0.406])
 std = np.array([0.229, 0.224, 0.225])
-path_cnn = 'models/EfficientNetV2S_iNat.pt'
+path_cnn = 'models/model.pth'
 
 device = torch.device('cpu')
 model = torch.load(path_cnn, map_location=device)
