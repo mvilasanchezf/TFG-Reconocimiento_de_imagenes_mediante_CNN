@@ -6,4 +6,4 @@ Este proyecto es mi trabajo de fin de grado.
  
  Consta de dos partes diferenciadas:
  * El código desarrollado en cuadernos de Jupyter para el entrenamiento de diferentes modelos de redes.
- * Una aplicación hecha en Flask, que realiza una predicción de que especie se trata el ser vivo (animales, hongos ó plantas) que contiene la fotografía,
+ * Una aplicación hecha en Flask, que realiza una predicción de que especie se trata el ser vivo (animales, hongos ó plantas) que contiene la fotografía.
