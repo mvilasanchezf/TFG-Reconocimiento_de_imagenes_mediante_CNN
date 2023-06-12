@@ -48,7 +48,7 @@ La aplicación se encuentra en la carpeta "Aplicación". En ella se encuentra el
 
 ## Instalación de los requisitos previos para la ejecución del código
 
-Para poder ejecutar el código de los cuadernos de Jupyter, es necesario tener instalado Python 3.6 o superior, y las siguientes librerías:
+Para poder ejecutar el código de los cuadernos de Jupyter, es necesario tener instalado Python 3.11 o superior, y las siguientes librerías:
 
 ```sh
 pip install pytorch
