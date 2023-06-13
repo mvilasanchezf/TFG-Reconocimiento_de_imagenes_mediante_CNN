@@ -44,7 +44,7 @@ La aplicación se encuentra en la carpeta "Aplicación". En ella se encuentra el
 
 * **static:** Se encuentra el código css de la página web de la aplicación y las imágenes estaticas de la página web.
 
-* **modelos:** Se encuentra el modelo de CNN entrenado y los metadatos de las especies de animales, hongos y plantas.
+* **models:** Se encuentra el modelo de CNN entrenado y los metadatos de las especies de animales, hongos y plantas.
 
 
 
@@ -115,7 +115,7 @@ The application is located in the "Aplicación" folder. In it is the code develo
 
 * **static:** The css code of the web page of the application and the static images of the web page are located.
 
-* **modelos:** The trained CNN model and the metadata of the animal, fungi and plant species are located.
+* **models:** The trained CNN model and the metadata of the animal, fungi and plant species are located.
 
 
 
