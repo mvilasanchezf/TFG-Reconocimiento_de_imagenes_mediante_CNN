@@ -1,6 +1,9 @@
 # (ESP) Reconocimiento de imágenes mediante aprendizaje profundo 
 
-<img align="center" src="https://github.com/mvilasanchezf/TFG-Reconocimiento_de_imagenes_mediante_CNN/blob/master/assets/Arquitectura%20TFG%20small.png">
+<p align="center">
+  <img src="https://github.com/mvilasanchezf/TFG-Reconocimiento_de_imagenes_mediante_CNN/blob/master/assets/Arquitectura%20TFG%20small.png
+" alt="Arquitectura TFG"/>
+</p>
 
 Este proyecto es mi trabajo de fin de grado para el ciclo de desarrollo de aplicaciones multiplataforma.
  
